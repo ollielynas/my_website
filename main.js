@@ -2,6 +2,15 @@
 
 onload= function() {
 
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      )
+    ) {
+      // true for mobile device
+      document.getElementsByClassName("body")[0].style.width = "100%";
+    }
+
+
     scroll_to = document.getElementsByClassName("scroll_to");
     paragraphs = document.getElementsByTagName("p");
 
