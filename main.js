@@ -24,7 +24,10 @@ onload= function() {
         new_item.appendChild(text);
 
         new_item.onclick = function() {
-            window.scrollTo(0, scroll_to[i].offsetTop-200);
+            scroll_to[i].scrollIntoView({
+              behavior: "smooth",
+            });
+            // window.scrollTo(0, scroll_to[i].offsetTop-200);
         }
 
         contents_list.appendChild(new_item);
